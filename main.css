@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+:root {
+    /* --light-grey: rgb(176, 176, 176);
+    --cadillac: #a44c6c;
+    --gondola: #2c182c;
+    --mischka: #d6d6dd;
+    --cerulean-blue: #344ccc;
+    --blue-zodiac: #141c54;
+    --blue: #0c24e4;
+    --torea-bay: #141ca4;
+    --dove-gray: #6c6c6c;
+    --light-grey: #d0d0d033; */
+    --bg-color: #edf1fa;
+    --navy-blue: #97c0f8;
+    --black-color: #35393c;
+    --white-color: #ffffff;
+    /* color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+    --font-Allerta: 'Allerta Stencil', sans-serif;
+    --font-Bebas: 'Bebas Neue', cursive;
+    --font-Oswald: 'Oswald', sans-serif;
+    --font-Robo: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    padding: 1rem 53rem;
+    background-color: black;
+    color: black;
+}
+@media only screen and (max-width: 120rem) {
+    body {
+        padding: 1rem 34rem;
+    }
+}
+@media only screen and (max-width: 10rem) {
+    body {
+        padding: 1rem 30rem;
+    }
+}
+@media only screen and (max-width: 80rem) {
+    body {
+        padding: 1rem 25rem;
+        background-color: #141c54;
+    }
+}
+@media only screen and (max-width: 70rem) {
+    body {
+        padding: 1rem 15rem;;
+    }
+}
+@media only screen and (max-width: 45rem) {
+    body {
+        padding: 1rem 10rem;;
+    }
+}
+@media only screen and (max-width: 35rem) {
+    body {
+        padding: 1rem 5rem;;
+    }
+}
+header {
+    height: 10vh;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    border: 2px solid white;
+    height: 95vh;
+    /* height: auto; */
+    border-radius: 1rem;
+    background-color: var(--bg-color);
+}
+header{
+    display: flex;
+    align-items: center;
+}
+.fa-bars{
+    font-size: 2rem;
+    display: block;
+    margin: auto;
+}
+.midHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+}
+.midHeader div{
+    font-family: var(--font-Robo);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--blue-zodiac);
+}
+.midHeader span{
+    font-size: 1.5rem;
+    font-family: var(--font-Oswald);
+    font-weight: 700;
+}
+.rightHeader {
+    height: 80%;
+}
+
+.rightHeader img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    border: 2px solid white;
+}
+
+.searchSection {
+    display: flex;
+    justify-content: center;
+}
+
+.searchSection input {
+    width: 60%;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    background-color: var(--white-color);
+    color: black;
+}
+.searchSection input::placeholder{
+    color: black;
+}
+.navbar{
+    margin: 2rem 0;
+}
+.navbarList{
+    font-size: 1.5rem;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: var(--font-Robo);
+    margin: 0rem 3rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+/* .navbarList:hover{
+    
+} */
+
+.containerForNotes{
+    /* border: 2px solid; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.noteBox{
+    padding: 2rem 1rem;
+    color: #0093E9;
+    /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+    background-image: linear-gradient(to right top, #90b8f5, #93bbf6, #95bdf6, #98c0f7, #9bc2f7);
+    margin: 1rem;
+    border-radius: 1rem;
+    line-height: 4rem;
+    transition: all .3s;
+}
+
+.noteBox input{
+     font-size: 1.5rem;
+     font-weight: 600;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: white;
+}
+.noteBox input::placeholder{
+    color: white;
+}
+textarea{
+    background-color: transparent;
+    color: white;
+    overflow-y: hidden;
+    border: none;
+    outline: none;
+    line-height: 1.7rem;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    font-family: var(--font-Robo);
+    font-size: 1.4rem;
+}
+.addBtn{
+    z-index: 1;
+    position: static;
+    border: none;
+    border-radius: 10rem;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    background-color: var(--navy-blue);
+}
+.addBtn:hover{
+    background: #90b8f5;
+    transition: all .5s;
+}
+.fa-plus{
+    font-size: 2rem;
+    z-index: 2;
+    color: white;
+}
+/* To Do CSS Only Down */
+
+.todoContainer{
+    width: 100%;
+}
+.todolist{
+    background-color: var(--white-color);
+    backdrop-filter: blur(21px);
+    /* display: grid;
+    grid-template-columns: .1fr 1fr .5fr; */
+    /* place-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-family: var(--font-Robo);
+}
+.todolist span{
+    color: inherit;
+    font-size: 1.5rem;
+    user-select: none;
+}
+.fa-trash{
+    height: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.taskDone{
+    text-decoration: line-through;
+    background-color: var(--navy-blue);
+    color: var(--white-color);
+}
